@@ -2,7 +2,7 @@
 
 ## 1. External layer
 <p style="background:#eee">
-    <img src="1-External layer.png" width="550" alt="External layer" title="External layer"/>
+    <img src="1-External layer.png" width="750" alt="External layer" title="External layer"/>
 </p>
 
 ## 2. Patient Internal Process
@@ -42,5 +42,5 @@
 
 ## 9. Insurance Claim Data Validation
 <p style="background:#eee">
-    <img src="9-Insurance_claim_data_validation.png" width="550" alt="Insurance Claim Data Validation" title="Insurance Claim Data Validation"/>
+    <img src="9-Insurance_claim_data_validation.png" width="750" alt="Insurance Claim Data Validation" title="Insurance Claim Data Validation"/>
 </p>
