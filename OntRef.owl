@@ -4,6 +4,7 @@
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:ufo="https://mmisw.org/ont/~mubashar/OntRef#ufo:"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
@@ -83,6 +84,42 @@
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dcterms:license</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">It is a dublin core metadata term.</rdfs:seeAlso>
     </owl:AnnotationProperty>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/OntRef#ufo:action -->
+
+    <owl:AnnotationProperty rdf:about="https://mmisw.org/ont/~mubashar/OntRef#ufo:action"/>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/OntRef#ufo:disposition -->
+
+    <owl:AnnotationProperty rdf:about="https://mmisw.org/ont/~mubashar/OntRef#ufo:disposition"/>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/OntRef#ufo:goal -->
+
+    <owl:AnnotationProperty rdf:about="https://mmisw.org/ont/~mubashar/OntRef#ufo:goal"/>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/OntRef#ufo:kind -->
+
+    <owl:AnnotationProperty rdf:about="https://mmisw.org/ont/~mubashar/OntRef#ufo:kind"/>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/OntRef#ufo:moment -->
+
+    <owl:AnnotationProperty rdf:about="https://mmisw.org/ont/~mubashar/OntRef#ufo:moment"/>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/OntRef#ufo:subKind -->
+
+    <owl:AnnotationProperty rdf:about="https://mmisw.org/ont/~mubashar/OntRef#ufo:subKind"/>
     
 
 
@@ -431,6 +468,7 @@
         <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#Matulevicius2017"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Assets are valuable and play an important role accomplishing the organization’s objectives. Assets are classified as system and business assets.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asset</rdfs:label>
+        <ufo:kind rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Provides its instances the uniform principles of individuation and identification.</ufo:kind>
     </owl:Class>
     
 
@@ -443,6 +481,7 @@
         <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#Matulevicius2017"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The information and services are available to authorized users when needed.</rdfs:comment>
         <rdfs:label>Availability</rdfs:label>
+        <ufo:goal rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Availability security criterion as a propositional content of intention.</ufo:goal>
     </owl:Class>
     
 
@@ -463,6 +502,7 @@
         <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#Matulevicius2017"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Business assets describe the information, processes, capabilities and skills essential to the business and its core mission.</rdfs:comment>
         <rdfs:label>BusinessAsset</rdfs:label>
+        <ufo:subKind rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Specializes a Kind.</ufo:subKind>
     </owl:Class>
     
 
@@ -475,6 +515,7 @@
         <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#Matulevicius2017"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The data is only available to authorized users.</rdfs:comment>
         <rdfs:label>Confidentiality</rdfs:label>
+        <ufo:goal rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Confidentiality security criterion as a propositional content of intention.</ufo:goal>
     </owl:Class>
     
 
@@ -495,6 +536,7 @@
         <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#Matulevicius2017"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Countermeasures are controls to improve the security of the system. Countermeasure can be processes, policies, devices, practices or other actions or components of the information system and its organisation that act to reduce risks.</rdfs:comment>
         <rdfs:label>Countermeasure</rdfs:label>
+        <ufo:action rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Derived by intention.</ufo:action>
     </owl:Class>
     
 
@@ -507,6 +549,7 @@
         <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#Matulevicius2017"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Integrity refers to the certainty that the data is not tampered with during or after the submission.</rdfs:comment>
         <rdfs:label>Integrity</rdfs:label>
+        <ufo:goal rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Integrity security criterion as a propositional content of intention.</ufo:goal>
     </owl:Class>
     
 
@@ -525,6 +568,7 @@
         <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#Matulevicius2017"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Security criteria is a constraint on business assets and characterize a security need which are expressed as confidentiality, integrity and availability of business assets.</rdfs:comment>
         <rdfs:label>SecurityCriteria</rdfs:label>
+        <ufo:goal rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Propositional content of intention.</ufo:goal>
     </owl:Class>
     
 
@@ -545,6 +589,7 @@
         <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#Matulevicius2017"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Systems assets are the component or part of an information system, valuable to the organization since it supports business assets.</rdfs:comment>
         <rdfs:label>SystemAsset</rdfs:label>
+        <ufo:subKind rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Specializes a Kind.</ufo:subKind>
     </owl:Class>
     
 
@@ -568,6 +613,7 @@
         <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#Matulevicius2017"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A threat is an incident initiated by a threat agent using an attack method to target one or more IS assets by exploiting their vulnerabilities.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Threat</rdfs:label>
+        <ufo:moment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Existentially dependent on other particulars.</ufo:moment>
     </owl:Class>
     
 
@@ -591,6 +637,7 @@
         <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#Matulevicius2017"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A vulnerability is the characteristic of an IS asset or group of IS assets that exposes a weakness or flaw in terms of security.</rdfs:comment>
         <rdfs:label>Vulnerability</rdfs:label>
+        <ufo:disposition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disposition &amp; Manifested in a particular situation or the occurrence of certain triggering events.</ufo:disposition>
     </owl:Class>
     
 
