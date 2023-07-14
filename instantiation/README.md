@@ -82,13 +82,13 @@ SELECT DISTINCT ?Countermeasure ?Vulnerability WHERE {
 ## Classification of OntReF instantiation
 Protégé-based classification illustrates the class hierarchies along with their defined relationships.
 
-<img src="OntReF-instantiation.png" width="450" alt="OntReF Protégé-based classifications" title="OntReF Protégé-based classifications"/>
+<img src="OntRef-instantiation.png" width="450" alt="OntReF Protégé-based classifications" title="OntReF Protégé-based classifications"/>
 
 ### Class hierarchies
 
 OntReF instantiation "is-a" based taxonomical structure illustrates the class hierarchies.
 
-<img src="OntReF_classes_hierarchy.png" width="450" alt="OntReF Protégé-based classifications" title="OntReF Protégé-based classifications"/>
+<img src="OntRef_classes_hierarchy.png" width="450" alt="OntReF Protégé-based classifications" title="OntReF Protégé-based classifications"/>
 
 ## How to use?
 Download [Protégé](https://protege.stanford.edu) editor. Load/import [OntRef instantiation](https://mmisw.org/ont/~mubashar/OntRef-instantiation) in Protégé and navigate to the *Entities* tab. You can also execute the above-listed SPARQL queries to explore the encoded security risk management concepts.
