@@ -827,6 +827,14 @@
     
 
 
+    <!-- https://mmisw.org/ont/~mubashar/OntRef-instantiation#SecurityDesigner -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/OntRef-instantiation#SecurityDesigner">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/OntRef-instantiation#SystemStakeholder"/>
+    </owl:Class>
+    
+
+
     <!-- https://mmisw.org/ont/~mubashar/OntRef-instantiation#SybilAttack -->
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/OntRef-instantiation#SybilAttack">
@@ -887,6 +895,12 @@
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Systems assets are the component or part of an information system, valuable to the organization since it supports business assets.</rdfs:comment>
         <rdfs:label>SystemAsset</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/OntRef-instantiation#SystemStakeholder -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/OntRef-instantiation#SystemStakeholder"/>
     
 
 

@@ -93,9 +93,21 @@
     
 
 
+    <!-- https://mmisw.org/ont/~mubashar/OntRef#ufo:agent -->
+
+    <owl:AnnotationProperty rdf:about="https://mmisw.org/ont/~mubashar/OntRef#ufo:agent"/>
+    
+
+
     <!-- https://mmisw.org/ont/~mubashar/OntRef#ufo:disposition -->
 
     <owl:AnnotationProperty rdf:about="https://mmisw.org/ont/~mubashar/OntRef#ufo:disposition"/>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/OntRef#ufo:event -->
+
+    <owl:AnnotationProperty rdf:about="https://mmisw.org/ont/~mubashar/OntRef#ufo:event"/>
     
 
 
@@ -108,12 +120,6 @@
     <!-- https://mmisw.org/ont/~mubashar/OntRef#ufo:kind -->
 
     <owl:AnnotationProperty rdf:about="https://mmisw.org/ont/~mubashar/OntRef#ufo:kind"/>
-    
-
-
-    <!-- https://mmisw.org/ont/~mubashar/OntRef#ufo:moment -->
-
-    <owl:AnnotationProperty rdf:about="https://mmisw.org/ont/~mubashar/OntRef#ufo:moment"/>
     
 
 
@@ -173,6 +179,17 @@
     
 
 
+    <!-- https://mmisw.org/ont/~mubashar/OntRef#goalOf -->
+
+    <owl:ObjectProperty rdf:about="https://mmisw.org/ont/~mubashar/OntRef#goalOf">
+        <owl:inverseOf rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#hasGoal"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#SecurityCriteria"/>
+        <rdfs:range rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#SystemStakeholder"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://mmisw.org/ont/~mubashar/OntRef#harms -->
 
     <owl:ObjectProperty rdf:about="https://mmisw.org/ont/~mubashar/OntRef#harms">
@@ -210,6 +227,27 @@
     
 
 
+    <!-- https://mmisw.org/ont/~mubashar/OntRef#hasGoal -->
+
+    <owl:ObjectProperty rdf:about="https://mmisw.org/ont/~mubashar/OntRef#hasGoal">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#SystemStakeholder"/>
+        <rdfs:range rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#SecurityCriteria"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/OntRef#implements -->
+
+    <owl:ObjectProperty rdf:about="https://mmisw.org/ont/~mubashar/OntRef#implements">
+        <owl:inverseOf rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#isImplementedBy"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#SystemStakeholder"/>
+        <rdfs:range rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#Countermeasure"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://mmisw.org/ont/~mubashar/OntRef#isExploitedBy -->
 
     <owl:ObjectProperty rdf:about="https://mmisw.org/ont/~mubashar/OntRef#isExploitedBy">
@@ -234,6 +272,16 @@
     
 
 
+    <!-- https://mmisw.org/ont/~mubashar/OntRef#isImplementedBy -->
+
+    <owl:ObjectProperty rdf:about="https://mmisw.org/ont/~mubashar/OntRef#isImplementedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#Countermeasure"/>
+        <rdfs:range rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#SystemStakeholder"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://mmisw.org/ont/~mubashar/OntRef#isMitigatedBy -->
 
     <owl:ObjectProperty rdf:about="https://mmisw.org/ont/~mubashar/OntRef#isMitigatedBy">
@@ -242,7 +290,7 @@
         <rdfs:domain rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#Vulnerability"/>
         <rdfs:range rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#Countermeasure"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">It is an inverse relation of mitigates where  one or more vulnerabilities associated to a particular threat are mitigated by countermeasure.</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isMitigatedBy</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isIntendedToMitigateBy</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -256,6 +304,17 @@
         <rdfs:range rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#Vulnerability"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">It is an inverse relation of negates where security criteria of business assets is negated by vulnerability.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isNegatedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/OntRef#isPtotectedBy -->
+
+    <owl:ObjectProperty rdf:about="https://mmisw.org/ont/~mubashar/OntRef#isPtotectedBy">
+        <owl:inverseOf rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#protects"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#SystemAsset"/>
+        <rdfs:range rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#Countermeasure"/>
     </owl:ObjectProperty>
     
 
@@ -293,7 +352,7 @@
         <rdfs:domain rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#Countermeasure"/>
         <rdfs:range rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#Vulnerability"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A countermeasure mitigates one or more vulnerabilities associated to a particular threat.</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mitigates</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">intendedToMitigate</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -306,6 +365,16 @@
         <rdfs:range rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#SecurityCriteria"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vulnerability negates the defined security criteria of business assets.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">negates</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/OntRef#protects -->
+
+    <owl:ObjectProperty rdf:about="https://mmisw.org/ont/~mubashar/OntRef#protects">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#Countermeasure"/>
+        <rdfs:range rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#SystemAsset"/>
     </owl:ObjectProperty>
     
 
@@ -462,6 +531,7 @@
                 <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#Vulnerability"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#SystemStakeholder"/>
         <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#Threat"/>
         <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#Vulnerability"/>
         <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#Dubois2010"/>
@@ -526,10 +596,17 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#mitigates"/>
-                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#Vulnerability"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#Threat"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#protects"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#SystemAsset"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#SecurityCriteria"/>
+        <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#SystemStakeholder"/>
         <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#Threat"/>
         <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#Vulnerability"/>
         <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#Dubois2010"/>
@@ -563,6 +640,7 @@
                 <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#BusinessAsset"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#SystemStakeholder"/>
         <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#Threat"/>
         <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#Dubois2010"/>
         <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#Matulevicius2017"/>
@@ -594,6 +672,31 @@
     
 
 
+    <!-- https://mmisw.org/ont/~mubashar/OntRef#SystemStakeholder -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/OntRef#SystemStakeholder">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#hasGoal"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#SecurityCriteria"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#implements"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#Countermeasure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#Threat"/>
+        <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#Vulnerability"/>
+        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#An_Ontology_of_Security_from_a_Risk_Treatment_Perspective"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An agent (characterized by their ability to have goals, intentions, beliefs, and capabilities) refers to an entity capable of performing intentional actions</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SystemStakeholder</rdfs:label>
+        <ufo:agent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The ”Agent” concept in the UFO refers to an entity capable of performing intentional actions and exhibiting behaviors</ufo:agent>
+    </owl:Class>
+    
+
+
     <!-- https://mmisw.org/ont/~mubashar/OntRef#Threat -->
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/OntRef#Threat">
@@ -613,7 +716,7 @@
         <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#Matulevicius2017"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A threat is an incident initiated by a threat agent using an attack method to target one or more IS assets by exploiting their vulnerabilities.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Threat</rdfs:label>
-        <ufo:moment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Existentially dependent on other particulars.</ufo:moment>
+        <ufo:event rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Existentially dependent on other particulars.</ufo:event>
     </owl:Class>
     
 
@@ -650,6 +753,22 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/OntRef#An_Ontology_of_Security_from_a_Risk_Treatment_Perspective -->
+
+    <owl:NamedIndividual rdf:about="https://mmisw.org/ont/~mubashar/OntRef#An_Ontology_of_Security_from_a_Risk_Treatment_Perspective">
+        <Authors>Ítalo Oliveira, Tiago Prince Sales, Riccardo Baratella, Mattia Fumagalli, Giancarlo Guizzardi</Authors>
+        <DOI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1007/978-3-031-17995-2_26</DOI>
+        <Pages rdf:datatype="http://www.w3.org/2001/XMLSchema#string">365–379</Pages>
+        <Publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lecture Notes in Computer Science, vol 13607. Springer, Cham</Publisher>
+        <Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Ontology of Security from a Risk Treatment Perspective</Title>
+        <Year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022</Year>
+        <Year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conference paper</Year>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Ontology of Security from a Risk Treatment Perspective</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reference</rdfs:seeAlso>
+    </owl:NamedIndividual>
     
 
 
