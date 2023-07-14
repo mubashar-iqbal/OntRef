@@ -1,9 +1,9 @@
-# Blockchain-based Ontology Driven Reference Framework (OntRef) Instantiation
+# Blockchain-based Ontology Driven Reference Framework (OntReF) Instantiation
 
-We [instantiated](https://github.com/mubashar-iqbal/OntRef/blob/main/instantiation/OntRef-instantiation.owl) the [OntRef](https://github.com/mubashar-iqbal/OntRef) with the data tampering threat and Sybil attack.
+We [instantiated](https://github.com/mubashar-iqbal/OntReF/blob/main/instantiation/OntReF-instantiation.owl) the [OntReF](https://github.com/mubashar-iqbal/OntReF) with the data tampering threat and Sybil attack.
 
 ## SPARQL queries
-The SPARQL queries can be used to retrieve information from an OntRef instantiation ontology. The following header code will remain the same for all the queries listed in this section.
+The SPARQL queries can be used to retrieve information from an OntReF instantiation ontology. The following header code will remain the same for all the queries listed in this section.
 
 ```sql
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -79,16 +79,16 @@ SELECT DISTINCT ?Countermeasure ?Vulnerability WHERE {
 }
 ```
 
-## Classification of OntRef instantiation
+## Classification of OntReF instantiation
 Protégé-based classification illustrates the class hierarchies along with their defined relationships.
 
-<img src="OntRef-instantiation.png" width="450" alt="OntRef Protégé-based classifications" title="OntRef Protégé-based classifications"/>
+<img src="OntReF-instantiation.png" width="450" alt="OntReF Protégé-based classifications" title="OntReF Protégé-based classifications"/>
 
 ### Class hierarchies
 
-OntRef instantiation "is-a" based taxonomical structure illustrates the class hierarchies.
+OntReF instantiation "is-a" based taxonomical structure illustrates the class hierarchies.
 
-<img src="OntRef_classes_hierarchy.png" width="450" alt="OntRef Protégé-based classifications" title="OntRef Protégé-based classifications"/>
+<img src="OntReF_classes_hierarchy.png" width="450" alt="OntReF Protégé-based classifications" title="OntReF Protégé-based classifications"/>
 
 ## How to use?
 Download [Protégé](https://protege.stanford.edu) editor. Load/import [OntRef instantiation](https://mmisw.org/ont/~mubashar/OntRef-instantiation) in Protégé and navigate to the *Entities* tab. You can also execute the above-listed SPARQL queries to explore the encoded security risk management concepts.

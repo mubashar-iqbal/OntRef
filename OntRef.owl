@@ -606,7 +606,6 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#SecurityCriteria"/>
-        <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#SystemStakeholder"/>
         <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#Threat"/>
         <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#Vulnerability"/>
         <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#Dubois2010"/>
@@ -640,7 +639,6 @@
                 <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#BusinessAsset"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#SystemStakeholder"/>
         <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#Threat"/>
         <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#Dubois2010"/>
         <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/OntRef#Matulevicius2017"/>
@@ -764,8 +762,8 @@
         <Pages rdf:datatype="http://www.w3.org/2001/XMLSchema#string">365–379</Pages>
         <Publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lecture Notes in Computer Science, vol 13607. Springer, Cham</Publisher>
         <Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Ontology of Security from a Risk Treatment Perspective</Title>
-        <Year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022</Year>
-        <Year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conference paper</Year>
+        <Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conference paper</Type>
+        <Year rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2022</Year>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Ontology of Security from a Risk Treatment Perspective</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reference</rdfs:seeAlso>
     </owl:NamedIndividual>
